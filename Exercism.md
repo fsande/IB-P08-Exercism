@@ -1,4 +1,4 @@
-# Práctica 07. Funciones
+# Práctica 08. Exercism
 
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
@@ -57,6 +57,7 @@ En la página de ese problema (o de cualquier otro) hallará Ud. un enlace que i
 [Begin walk-through](https://exercism.io/cli-walkthrough).
 Si sigue ese enlace le llevará a una pantalla *Welcome to the Exercism installation guide!* con instrucciones
 sobre cómo instalar `exercism`.
+En este documento se propone instalarla en la máquina virtual Linux de la asignatura.
 Eligiendo la opción *Linux* y a continuación la opción *Using snap* se le pedirá que ejecute
 ```
 sudo snap install exercism
@@ -87,7 +88,7 @@ El comando anterior, una vez ejecutado indica:
 ou have configured the Exercism command-line client:
 
 Config dir:                       /home/usuario/snap/exercism/5/.config/exercism
-Token:         (-t, --token)      b340cf22-fcfb-47eb-a7b2-66f3124dee8a
+Token:         (-t, --token)      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Workspace:     (-w, --workspace)  /home/usuario/snap/exercism/5/exercism
 API Base URL:  (-a, --api)        https://api.exercism.io/v1
 ```
@@ -95,10 +96,11 @@ A continuación se puede elegir un problema para pasar a resolverlo.
 Se propone, como ya se ha dicho, elegir el problema "Hello World".
 En la página de ese problema figura una descripción precisa del problema planteado y en la parte derecha de
 esa página figuran las instrucciones para:
-* Download (descargar el problema) mediante el comando `exercism download --exercise=hello-world --track=cpp`
-* Solve (para resolver el problema se propone usar el editor favorito del usuario. Se recomienda usar Visual
+* Download. Descargar el problema mediante el comando `exercism download --exercise=hello-world --track=cpp`
+* Solve. Para resolver el problema se propone usar el editor favorito del usuario. Se recomienda usar Visual
   Studio Code
-* Submit (el comando para subir a la plataforma la solución que el usuario proponga)
+* Submit. El comando para subir a la plataforma la solución que el usuario proponga.
+
 Si se ejecuta el comando para descargar el problema el sistema responde:
 ```
 $ exercism download --exercise=hello-world --track=cpp
@@ -108,13 +110,20 @@ Downloaded to
 ```
 indicando el directorio donde ha colocado el código necesario para trabajar en ese problema.
 
+Si revisa Ud. los ficheros descargados observará que Exercism utiliza `.cpp` como extensión para los ficheros
+con código fuente C++ en lugar de la extensión `.cc` que recomienda la Guía de Estilo de Google.
+La extensión `.cpp` es muy común para ficheros de código C++.
+
+### Ejecución de los tests para un determinado problema
+El siguiente paso consiste en editar el programa (en el caso del problema "Hello World" el fichero a editar es
+`hello_world.cpp`).
 
 
 
 
 
-Antes de comenzar a resolver problemas tendrá Ud. que instalar la aplicación `exercism`.
-En este documento se propone instalarla en la máquina virtual Linux de la asignatura.
+
+
 
 
 
