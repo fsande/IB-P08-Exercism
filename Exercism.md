@@ -45,6 +45,10 @@ Usando esa aplicación, un usuario puede descargar una serie de ejercicios de pr
 plataforma y realiza los correspondientes programas hasta que consigue aprobar los diferentes tests que se le
 pasan a cada ejercicio.
 
+La plataforma puede ser usada en "modo práctica", en cuyo caso no existe la opción de mentorización (solicitar
+que una experta le ayude con sus ejercicios), pero aún
+así merece la pena practicar los múltiples ejercicios que hallará en la plataforma.
+
 ### Primeros pasos en Exercism
 Comience por [registrarse en Exercism](https://exercism.io/users/sign_up). 
 Si lo desea, puede Ud. hacerlo usando la cuenta de GitHub de la que ya dispone.
@@ -143,8 +147,36 @@ $ cd build
 $ cmake -G "Unix Makefiles" ..
 $ make
 ```
+El comando [touch](https://ss64.com/bash/touch.html) modifica la fecha del fichero (ficheros) que se le pasen
+como argumentos. 
+El directorio `build` que se crea servirá para alojar (entre otros ficheros) un programa ejecutable que pasará
+los tests a su código.
+Exercism utiliza `cmake` (tendrá Ud. que instalar esa aplicación en su VM si no la tiene instalada).
+[CMake](https://cmake.org/) es una herramienta (similar a `make` en cuanto a su finalidad, pero más
+sofisticada) que facilita construir, probar y empaquetar software. 
+De forma análoga a `make`, `CMake` también se utiliza para controlar el proceso de compilación de la
+aplicación.
 
+Para usar Exercism no es necesario que conozca Ud. los detalles de `CMake`.
+El fichero `CMakeLists.txt` que acompaña a cada problema es un fichero de configuración para `CMake`.
+Al ejecutar `cmake -G "Unix Makefiles" ..` CMake creará un fichero Makefile que le servirá para compilar su
+ejercicio.
+Al ejecutar `make` en el directorio `build` se compilan los tests que ha de pasar su programa.
+Si se producen errores de compilación, tendrá Ud. que solucionarlos en el directorio (padre de `build` de su
+ejercicio.
+Una vez que se corrijan los errores, `make` construirá y ejecutará los tests que haya disponibles para el
+ejercicio en cuestión.
 
+Normalmente cada problema viene acompañado de un conjunto de tests cuyo código se encuentra en un fichero cuyo
+nombre tiene el sufijo `_test` (fichero `hello_world_test.cpp` en el caso del ejercicio "Hello
+World").
+La estrategia que ha de seguir a la hora de progresar en la mejora de su ejercicio es hacer que su código pase
+progresivamente las diferentes pruebas (tests) que figuran en ese fichero.
+Para ello basta que "mueva" en el código la línea
+```
+#if defined(EXERCISM_RUN_ALL_TESTS)
+```
+para situarla después del siguiente test que quiera probar.
 
 
 
