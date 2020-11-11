@@ -117,6 +117,36 @@ La extensión `.cpp` es muy común para ficheros de código C++.
 ### Ejecución de los tests para un determinado problema
 El siguiente paso consiste en editar el programa (en el caso del problema "Hello World" el fichero a editar es
 `hello_world.cpp`).
+Edite ese fichero hasta que considere que tiene una versión operativa.
+Una vez finalizado su programa, el siguiente paso consiste en pasar (superar) los tests del código.
+Cada ejercicio de Exercism va acompañado de una serie de tests que el programa debe superar para ser
+considerado válido.
+
+Tal como se explica en la página [Running the Tests](https://exercism.io/tracks/cpp/tests), cada problema va
+acompañado de sus tests unitarios (así se llama este tipo de tests) y un fichero `CMakeLists.txt` que se
+utiliza para automatizar la compilación de los tests y del propio programa.
+Tenga en cuenta que **no** debiera editar ni modificar el fichero `CMakeLists.txt`.
+
+Tal como se indica en la página anterior y suponiendo que su ejercicio se llame `bob`, 
+debieran existir los ficheros `bob.cpp` y `bob.h` antes de
+ejecutar los tests. 
+Esos ficheros podrían estar vacíos, pero han de existir.
+En el caso del ejercicio `hello-world` los ficheros son `hello-world.cpp` y `hello-world.h`
+
+El siguiente paso (suponiendo un entorno Linux) es compilar el programa y los tests unitarios.
+Para ello, colóquese en el directorio del ejercicio (`/home/usuario/snap/exercism/5/exercism/cpp/hello-world`)
+y ejecute:
+```
+$ touch hello-world.{h,cpp}
+$ mkdir build
+$ cd build
+$ cmake -G "Unix Makefiles" ..
+$ make
+```
+
+
+
+
 
 
 
