@@ -89,7 +89,7 @@ Basta copiar de esa página el token y colocarlo en el comando anterior.
 
 El comando anterior, una vez ejecutado indica:
 ```
-ou have configured the Exercism command-line client:
+You have configured the Exercism command-line client:
 
 Config dir:                       /home/usuario/snap/exercism/5/.config/exercism
 Token:         (-t, --token)      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
